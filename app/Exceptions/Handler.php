@@ -1,8 +1,12 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use InvalidArgumentException;
+use Symfony\Component\HttpFoundation\Response;
+use Throwable;
 
 class Handler extends ExceptionHandler
 {
@@ -33,5 +37,19 @@ class Handler extends ExceptionHandler
     public function register()
     {
         //
+    }
+
+    public function render($request, Throwable $exception) {
+        if ($exception instanceof InvalidConversionValue || $exception instanceof InvalidArgumentException) {
+            return response()->json(
+                [
+                    'error' => $exception->getMessage()
+                ], Response::HTTP_BAD_REQUEST
+            );
+        }
+
+        return response()->json(
+            [$exception->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR
+        );
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\NumeralConversionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/convert/{convertThis}', [NumeralConversionController::class, 'convertNumber'])
+    ->middleware('convert');
+Route::get('/top-ten', [NumeralConversionController::class, 'getTopTen']);
+Route::get('/recent/{startDate?}', [NumeralConversionController::class, 'getRecent'])
+    ->middleware('recent');

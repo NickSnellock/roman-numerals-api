@@ -1,0 +1,29 @@
+version: '3'
+services:
+  php:
+    build:
+      context: docker/conf/php
+    restart: always
+    volumes:
+      - ../roman-numerals-api:/var/www
+    environment:
+      PHP_IDE_CONFIG: "serverName=roman-numerals.test"
+    network_mode: bridge
+
+  web:
+    build:
+      context: docker/conf/nginx
+    volumes:
+      - ../roman-numerals-api:/var/www
+    ports:
+      - 80:80
+    restart: always
+    depends_on:
+      - php
+    network_mode: bridge
+    links:
+      - php
+
+volumes:
+  mysqlvol:
+    driver: "local"

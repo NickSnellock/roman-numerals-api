@@ -1,0 +1,393 @@
+_type: export
+__export_format: 4
+__export_date: 2020-12-12T11:56:10.457Z
+__export_source: insomnia.desktop.app:v2020.5.2
+resources:
+  - _id: req_wrk_e85b12c2da17438b94e01315968712b7f8612bc4
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607773366116
+    created: 1607773114790
+    url: "{{ base_url }}/convert/123"
+    name: convert a decimal integer to a roman numeral
+    description: ""
+    method: POST
+    body: {}
+    parameters:
+      - name: convertThis
+        disabled: false
+        value: "0"
+        id: pair_5085f0b1b95e412d99aa8cfe0ec2bbd2
+    headers: []
+    authentication: {}
+    metaSortKey: -1607773114790
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_e85b12c2da17438b94e01315968712b7
+    parentId: null
+    modified: 1607773114796
+    created: 1607770159365
+    name: Roman Numeral Conversion 1.0.0
+    description: ""
+    scope: spec
+    _type: workspace
+  - _id: req_38eedc6bfbcc4f909ac3606941522767
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607773410916
+    created: 1607773404360
+    url: "{{ base_url }}/convert/abc"
+    name: Convert invalid number
+    description: ""
+    method: POST
+    body: {}
+    parameters:
+      - name: convertThis
+        disabled: false
+        value: "0"
+        id: pair_5085f0b1b95e412d99aa8cfe0ec2bbd2
+    headers: []
+    authentication: {}
+    metaSortKey: -1607773114789
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_e85b12c2da17438b94e01315968712b78f8d0804
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607773114788
+    created: 1607773114788
+    url: "{{ base_url }}/top-ten"
+    name: get a list of the top ten most frequent conversions requested
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1607773114788
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_wrk_e85b12c2da17438b94e01315968712b7c733f912
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607773114785
+    created: 1607773114785
+    url: "{{ base_url }}/recent"
+    name: A list of the most recent requests. Defaults to last five days
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: startDate
+        disabled: true
+        value: string
+    headers: []
+    authentication: {}
+    metaSortKey: -1607773114785
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_00adf8e5b29648ed8fa8e03d70fdcafe
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607773534894
+    created: 1607773526211
+    url: "{{ base_url }}/recent/2020-10-10"
+    name: A list of the most recent requests. Date supplied
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: startDate
+        disabled: true
+        value: string
+        id: pair_9dcb6e8f5c7e4788acd11ea6166ec400
+    headers: []
+    authentication: {}
+    metaSortKey: -1607773114735
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e1e2701001054d17b665141e4ccab14c
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607773559537
+    created: 1607773552555
+    url: "{{ base_url }}/recent/2020-10-33"
+    name: A list of the most recent requests. Invalid date supplied
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - name: startDate
+        disabled: true
+        value: string
+        id: pair_9dcb6e8f5c7e4788acd11ea6166ec400
+    headers: []
+    authentication: {}
+    metaSortKey: -1607773114685
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_5ea3200a70ea9374fc85425bc5a545b8ff21fc8a
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607773114794
+    created: 1607770161413
+    name: Base environment
+    data:
+      base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1607770161413
+    _type: environment
+  - _id: jar_5ea3200a70ea9374fc85425bc5a545b8ff21fc8a
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607770161416
+    created: 1607770161416
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_e5d14f47766b49ada586b7fb770f2128
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607773114799
+    created: 1607770159368
+    fileName: convert.yaml
+    contents: >-
+      openapi: "3.0.0"
+
+      info:
+        version: 1.0.0
+        title: Roman Numeral Conversion
+      servers:
+        - url: http://roman-numerals.test/api
+      paths:
+        /convert:
+          post:
+            summary: convert a decimal integer to a roman numeral
+            parameters:
+              - name: convertThis
+                in: query
+                description: The decimal integer to convert
+                required: true
+                schema:
+                  type: integer
+            responses:
+              '201':
+                description: A successful conversion
+                content:
+                  application/json:
+                    schema:
+                      $ref: "#/components/schemas/convert"
+              '400':
+                description: Invalid number provided
+                content:
+                  application/json:
+                    schema:
+                      message: string
+        /top-ten:
+          get:
+            summary: get a list of the top ten most frequent conversions requested
+            responses:
+              '200':
+                description: A list of the top ten most frequently requested responses
+                content:
+                  application/json:
+                    schema:
+                      $ref: "#/components/schemas/top-ten"
+        /recent:
+          get:
+            summary: A list of the most recent requests. Defaults to last five days
+            parameters:
+              - name: startDate
+                in: query
+                required: false
+                schema:
+                  type: string
+                  format: 'Y-m-d'
+            responses:
+              '200':
+                description: A list of the requests after the date specified
+                content:
+                  application/json:
+                     schema:
+                       $ref: "#/components/schemas/recent"
+      components:
+        schemas:
+          convert:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: object
+                required:
+                  - convert_from
+                  - conversion
+                  - created_at
+                properties:
+                  convert_from:
+                  type: integer
+                  conversion:
+                    type: string
+                  created_at:
+                    type: string
+          top-ten:
+            type: object
+            requried:
+              - data
+            properties:
+              data:
+                type: array
+                items:
+                  type: object
+                required:
+                  - convert_from
+                  - conversion
+                  - created_at
+                properties:
+                  convert_from:
+                    type: integer
+                  conversion:
+                    type: string
+                  created_at:
+                    type: string
+          recent:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: array
+                items:
+                 type: object
+                 required:
+                   - convert_from
+                   - conversion
+                   - frequency
+                 properties:
+                   convert_from:
+                     type: integer
+                   conversion:
+                     type: string
+                   frequency:
+                     type: integer
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_174c70842a7040e8bda30daa277473a3
+    parentId: wrk_e85b12c2da17438b94e01315968712b7
+    modified: 1607773125337
+    created: 1607773125337
+    name: Test Roman Numerals
+    _type: unit_test_suite
+  - _id: env_env_5ea3200a70ea9374fc85425bc5a545b8ff21fc8a_sub
+    parentId: env_5ea3200a70ea9374fc85425bc5a545b8ff21fc8a
+    modified: 1607773114792
+    created: 1607773114792
+    name: OpenAPI env
+    data:
+      scheme: http
+      base_path: /api
+      host: roman-numerals.test
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1607773114792
+    _type: environment
+  - _id: ut_78678df294cd461cb1f00f5f463924db
+    parentId: uts_174c70842a7040e8bda30daa277473a3
+    modified: 1607773175614
+    created: 1607773139832
+    requestId: req_wrk_e85b12c2da17438b94e01315968712b7f8612bc4
+    name: Successful conversion
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(201);
+    _type: unit_test
+  - _id: ut_88c37c9397cc4af8bd41df3d3ca43b2c
+    parentId: uts_174c70842a7040e8bda30daa277473a3
+    modified: 1607773456319
+    created: 1607773442293
+    requestId: req_38eedc6bfbcc4f909ac3606941522767
+    name: Convert invalid number
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(400);
+    _type: unit_test
+  - _id: ut_d298208770fa415a8f13da5e2de97fbd
+    parentId: uts_174c70842a7040e8bda30daa277473a3
+    modified: 1607773484123
+    created: 1607773480897
+    requestId: req_wrk_e85b12c2da17438b94e01315968712b78f8d0804
+    name: Get top ten
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(200);
+    _type: unit_test
+  - _id: ut_20379f733e1442d097f4dd1bd436bcd4
+    parentId: uts_174c70842a7040e8bda30daa277473a3
+    modified: 1607773501555
+    created: 1607773497705
+    requestId: req_wrk_e85b12c2da17438b94e01315968712b7c733f912
+    name: Get recent without date
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(200);
+    _type: unit_test
+  - _id: ut_a59e5aa6d5d54838b128125f7da6ab26
+    parentId: uts_174c70842a7040e8bda30daa277473a3
+    modified: 1607773584614
+    created: 1607773580744
+    requestId: req_wrk_e85b12c2da17438b94e01315968712b7c733f912
+    name: Get recent without date
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(200);
+    _type: unit_test
+  - _id: ut_5d21ae1036dd4230b3bee8a1f543041e
+    parentId: uts_174c70842a7040e8bda30daa277473a3
+    modified: 1607773601288
+    created: 1607773598695
+    requestId: req_00adf8e5b29648ed8fa8e03d70fdcafe
+    name: Get recent with valid date
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(200);
+    _type: unit_test
+  - _id: ut_cab4b16518d04a118a63923f4a02e731
+    parentId: uts_174c70842a7040e8bda30daa277473a3
+    modified: 1607773623952
+    created: 1607773614979
+    requestId: req_e1e2701001054d17b665141e4ccab14c
+    name: Get recent with invalid date
+    code: |-
+      const response1 = await insomnia.send();
+      expect(response1.status).to.equal(400);
+    _type: unit_test
